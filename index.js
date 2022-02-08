@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
 const fetch = require("node-fetch-commonjs")
+const keepAlive = require("./server")
 
 const mySecret = process.env['TOKEN'];
 const client = new Discord.Client({
@@ -7,18 +8,33 @@ const client = new Discord.Client({
   })
 
 function getJokes(){
-  return fetch("https://zenquotes.io/api/random").then(res=>{
+  return fetch("https://v2.jokeapi.dev/joke/Dark?type=twopart").then(res=>{
     return res.json()
   }).then(data =>{
-    return data[0]["q"] + "-" + data[0]["a"]
+    return data.setup + "\n"+ data.delivery
   })
 }
 
+function getInsults(){
+  return fetch("https://insult.mattbas.org/api/insult.json").then(res=>{
+    return res.json()
+  }).then(data =>{
+    return data.insult
+  })
+}
+/*
+
+fetch("https://insult.mattbas.org/api/insult.json").then(function(resp){
+    return resp.json();
+})
+.then(function(data){
+  console.log(data)
+})
+{
 
 
-
-
-
+}
+*/
 
 
 client.on("ready", ()=>{
@@ -29,8 +45,14 @@ client.on("ready", ()=>{
 client.on("message",msg=>{
 if(msg.author.bot) return
 
-if(msg.content === "$shoot"){
-  getJokes().then(quote=> msg.channel.send(quote))
+if(msg.content === "!komedy"){
+  const user = msg.author;
+  getJokes().then(quote=> msg.reply(quote))
+}
+
+
+if(msg.content === "!insultme"){
+   getInsults().then(quote=> msg.reply(quote))
 }
 
 
@@ -40,5 +62,9 @@ if(msg.content === "$shoot"){
    
 
 })
+
+
+keepAlive()
+
 client.login(mySecret);
 
