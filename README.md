@@ -5,7 +5,7 @@
 A basic Discord bot that fetches some Dark jokes and memes
 
 ## Adding Bot 
-To add the bot to the server, simply just click on the link below and choose on of your servers to add it.
+To add the bot to the server, simply just click on the link below and choose one of your servers to add it.
 
 [OneLinerBot](https://cutt.ly/bOMP1c7)
 
