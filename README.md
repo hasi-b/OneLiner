@@ -25,8 +25,8 @@ To add the bot to the server, simply just click on the link below and choose on 
 
 ## API's used
 
-* [For Dark jokes](https://sv443.net/jokeapi/v2/) 
+* [For Dark jokes](https://sv443.net/jokeapi/v2/){target="_blank"}
 
-* [For Insults](https://insult.mattbas.org/ )
+* [For Insults](https://insult.mattbas.org/){target="_blank"}
 
-* [For Memes & Cattos](https://some-random-api.ml/ )
+* [For Memes & Cattos](https://some-random-api.ml/){target="_blank"}
