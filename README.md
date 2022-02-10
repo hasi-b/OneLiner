@@ -11,13 +11,13 @@ To add the bot to the server, simply just click on the link below and choose one
 
 ## Commands
 
-**!komedy** - fetches some dark jokes
+`!komedy` - fetches some dark jokes
 
-**!meme** - fetches some rotten memes
+`!meme` - fetches some rotten memes
 
-**!billu** - fetches some cute cats
+`!billu` - fetches some cute cats
 
-**!insultme** - fetches some pure trash
+`!insultme` - fetches some pure trash
 
 ## Demonstration
 
